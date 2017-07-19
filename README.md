@@ -36,3 +36,9 @@ knex migrate:make [options] <name>  # create migration
 knex migrate:rollback  # rollback migration
 knex seed:make [options] <name>  # create seed
 ```
+
+#### API Examples
+```
+# Full Text search on Littlefinger
+curl http://localhost:3000/theories?search=@@.Littlefinger
+```
