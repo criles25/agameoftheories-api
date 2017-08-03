@@ -1,53 +1,51 @@
 // Update with your config settings.
 
 module.exports = {
-
   development: {
-    client: 'postgresql',
+    client: "postgresql",
     connection: {
-      host: 'localhost',
+      host: "localhost",
       port: 5432,
-      database: 'postgres',
-      user:     'postgres',
-      password: 'pass'
+      database: "agot2",
+      user: "agot2",
+      password: "pass"
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: "knex_migrations"
     }
   },
 
   test: {
-    client: 'postgresql',
-      connection: {
-      host: 'localhost',
+    client: "postgresql",
+    connection: {
+      host: "localhost",
       port: 5432,
-      database: 'postgres',
-      user:     'postgres',
-      password: 'pass'
+      database: "agot",
+      user: "agot2",
+      password: "pass"
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: "knex_migrations"
     }
   },
 
   production: {
-    client: 'postgresql',
+    client: "postgresql",
     connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: "knex_migrations"
     }
   }
-
 };
